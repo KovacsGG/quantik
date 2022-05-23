@@ -4,12 +4,15 @@
   "description": "Modern technológiák 2 beadandó",
   "main": "app.js",
   "scripts": {
+    "start": "npx live-server",
     "build": "npx tsc",
+    "watch": "npx tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kovács Gellért Gábor",
   "license": "ISC",
   "devDependencies": {
+    "live-server": "^1.2.2",
     "typescript": "^4.6.4"
   }
 }
