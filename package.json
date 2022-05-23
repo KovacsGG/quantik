@@ -1,0 +1,15 @@
+{
+  "name": "quantik",
+  "version": "1.0.0",
+  "description": "Modern technológiák 2 beadandó",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kovács Gellért Gábor",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}

@@ -1,0 +1,31 @@
+#quantik-game {
+    --drop-shadow: 0 0;
+}
+
+#quantik-game :is(table, td) {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#quantik-game .figure {
+    width: 4em;
+    height: 4em;
+    padding: 0;
+    margin: 0.1em;
+}
+
+#quantik-game .figure:not([src]) {
+    visibility: hidden;
+}
+
+#quantik-game .figure.selected {
+    --drop-shadow: 0 0 0.5em yellow;
+}
+
+#quantik-game .figure.player1 {
+    filter: invert(51%) sepia(32%) saturate(1006%) hue-rotate(314deg) brightness(82%) contrast(111%) drop-shadow(var(--drop-shadow));
+}
+
+#quantik-game .figure.player2 {
+    filter: invert(76%) sepia(17%) saturate(733%) hue-rotate(62deg) brightness(94%) contrast(86%) drop-shadow(var(--drop-shadow));
+}
