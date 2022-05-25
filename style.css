@@ -7,6 +7,14 @@
     border-collapse: collapse;
 }
 
+#quantik-game .player ul {
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, min-content);
+    grid-auto-flow: column;
+}
+
 #quantik-game .figure {
     width: 4em;
     height: 4em;

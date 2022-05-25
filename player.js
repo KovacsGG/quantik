@@ -1,16 +1,25 @@
 import Component from "./component.js";
 import Figure, { SHAPES } from "./figure.js";
 export default class Player extends Component {
-    constructor(app, id) {
+    constructor(app, id, name) {
         super(app);
         this.element = document.createElement("div");
         this.figures = [];
         this.id = id;
+        this.name = name;
+        this.element.classList.add("player");
+        const heading = document.createElement("h1");
+        heading.innerHTML = this.name;
+        const drawer = document.createElement("ul");
+        this.element.appendChild(heading);
+        this.element.appendChild(drawer);
         for (let shape of SHAPES) {
             for (let _ = 0; _ < 2; _++) {
                 const f = new Figure(this.app, this, shape);
                 this.figures.push(f);
-                f.mount(this.element);
+                const item = document.createElement("li");
+                drawer.appendChild(item);
+                f.mount(item);
             }
         }
     }

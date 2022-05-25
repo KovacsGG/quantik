@@ -18,7 +18,7 @@ A fegyelmi vétség legsúlyosabb következménye a hallgató elbocsátása az e
 [ ] 1 Kezdőképernyő: játékosnév beállítása mező
 [ ] 1 Kezdőképernyő: megtekinthető a játékleírás
 [ ] 1 Kezdőképernyő: Start gombra megjelenik a játék
-[ ] 2 Játék: a játékosnevek a beállításoknak megfelelően jelennek meg, jól elkülöníthető a játékosok adatlapja
+[x] 2 Játék: a játékosnevek a beállításoknak megfelelően jelennek meg, jól elkülöníthető a játékosok adatlapja
 [ ] 1 Játék: jelezve van, hogy melyik az aktuális játékos
 [x] 1 Játék: ki lehet jelölni, melyik bábut szeretnénk lehelyezni
 [x] 2 Játék: csak az aktuális játékos bábuit lehet kijelölni

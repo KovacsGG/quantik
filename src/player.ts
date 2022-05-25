@@ -8,15 +8,27 @@ export default class Player extends Component {
     element = document.createElement("div")
     figures: Figure[] = []
     id: 1 | 2
+    name: string
 
-    constructor(app: App, id: 1 | 2) {
+    constructor(app: App, id: 1 | 2, name: string) {
         super(app)
         this.id = id
+        this.name = name
+
+        this.element.classList.add("player")
+        const heading = document.createElement("h1")
+        heading.innerHTML = this.name
+        const drawer = document.createElement("ul")
+        this.element.appendChild(heading)
+        this.element.appendChild(drawer)
         for (let shape of SHAPES) {
             for (let _ = 0; _ < 2; _++) {
                 const f = new Figure(this.app, this, shape)
                 this.figures.push(f)
-                f.mount(this.element)
+
+                const item = document.createElement("li")
+                drawer.appendChild(item)
+                f.mount(item)
             }
 
         }
