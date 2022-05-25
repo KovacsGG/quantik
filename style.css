@@ -1,5 +1,34 @@
+:root {
+    font-family: sans-serif;
+}
+
+code {
+    background-color: rgb(233, 233, 233);
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 5px;
+    padding: 0 0.2em;
+    color: indianred;
+}
+
+code.block {
+    display: block;
+}
+
+code > pre {
+    white-space: pre-wrap;
+}
+
+.composite-figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+details img {
+    max-width: 100%;
+}
+
 #quantik-game {
-    --drop-shadow: 0 0;
+    --drop-shadow: 0 0 0 transparent;
 }
 
 #quantik-game :is(table, td) {

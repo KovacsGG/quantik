@@ -15,9 +15,9 @@ A fegyelmi vétség legsúlyosabb következménye a hallgató elbocsátása az e
 [x] 0 Játék: A játéktér megjelenik.
 [x] 2 Játék: Egy 4x4-es rács megjelenik, és látják a játékosok, hogy milyen alakzatok közül tudnak választani.
 [x] 6 Játék: A rácsba el tudjuk helyezni a kiválasztott alakzatainkat felváltva.
-[ ] 1 Kezdőképernyő: játékosnév beállítása mező
-[ ] 1 Kezdőképernyő: megtekinthető a játékleírás
-[ ] 1 Kezdőképernyő: Start gombra megjelenik a játék
+[x] 1 Kezdőképernyő: játékosnév beállítása mező
+[x] 1 Kezdőképernyő: megtekinthető a játékleírás
+[x] 1 Kezdőképernyő: Start gombra megjelenik a játék
 [x] 2 Játék: a játékosnevek a beállításoknak megfelelően jelennek meg, jól elkülöníthető a játékosok adatlapja
 [ ] 1 Játék: jelezve van, hogy melyik az aktuális játékos
 [x] 1 Játék: ki lehet jelölni, melyik bábut szeretnénk lehelyezni
