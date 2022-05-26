@@ -3,7 +3,7 @@ import Figure, { SHAPES } from "./figure.js";
 export default class Player extends Component {
     constructor(app, id, name) {
         super(app);
-        this.element = document.createElement("div");
+        this.element = document.createElement("section");
         this.figures = [];
         this.id = id;
         this.name = name;
@@ -13,7 +13,7 @@ export default class Player extends Component {
         const drawer = document.createElement("ul");
         this.element.appendChild(heading);
         this.element.appendChild(drawer);
-        for (let shape of SHAPES) {
+        for (const shape of SHAPES) {
             for (let _ = 0; _ < 2; _++) {
                 const f = new Figure(this.app, this, shape);
                 this.figures.push(f);

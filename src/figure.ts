@@ -9,45 +9,45 @@ type shape = typeof SHAPES[0]
 
 
 export default class Figure extends Component {
-    player: null|Player
-    shape: null|shape
-    element: HTMLImageElement
+	player: null|Player
+	shape: null|shape
+	element: HTMLImageElement
 
-    constructor(app: App, player: null|Player = null, shape: null|shape = null) {
-        super(app)
-        this.player = player
-        this.shape = shape
-        this.element = document.createElement("img")
-        this.element.classList.add("figure")
-        this.element.addEventListener("click", () => {this.app.selectFigure(this)})
-        
-        this.update(this.player, this.shape)
-    }
+	constructor(app: App, player: null|Player = null, shape: null|shape = null) {
+		super(app)
+		this.player = player
+		this.shape = shape
+		this.element = document.createElement("img")
+		this.element.classList.add("figure")
+		this.element.addEventListener("click", () => {this.app.selectFigure(this)})
 
-    update(player: typeof this.player, shape: typeof this.shape) {
-        this.player = player
-        this.shape = shape
+		this.update(this.player, this.shape)
+	}
 
-        if (this.player && this.shape !== null) {
-            this.element.classList.add("player" + this.player.id)
-            this.element.src = `assets/${ICONS[this.shape - 1]}.svg`
-            this.element.alt = `Player ${this.player.id}'s ${ICONS[this.shape - 1]}`
-            
-        } else {
-            this.element.removeAttribute("src")
-            this.element.removeAttribute("alt")
-        }
-    }
+	update(player: typeof this.player, shape: typeof this.shape) {
+		this.player = player
+		this.shape = shape
 
-    hasShape() {
-        return this.shape !== null
-    }
+		if (this.player && this.shape !== null) {
+			this.element.classList.add("player" + this.player.id)
+			this.element.src = `assets/${ICONS[this.shape - 1]}.svg`
+			this.element.alt = `Player ${this.player.id}'s ${ICONS[this.shape - 1]}`
 
-    select() {
-        this.element.classList.add("selected")
-    }
+		} else {
+			this.element.removeAttribute("src")
+			this.element.removeAttribute("alt")
+		}
+	}
 
-    deselect() {
-        this.element.classList.remove("selected")
-    }
+	hasShape() {
+		return this.shape !== null
+	}
+
+	select() {
+		this.element.classList.add("selected")
+	}
+
+	deselect() {
+		this.element.classList.remove("selected")
+	}
 }

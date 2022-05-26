@@ -1,16 +1,22 @@
 import Board from "./board.js";
 import Player from "./player.js";
+import Infobox from "./infobox.js";
 class App {
     constructor(element, name1, name2) {
         this.board = new Board(this);
         this.selected = null;
         this.element = element;
+        const gameBoard = document.createElement("section");
+        const info = document.createElement("section");
         this.player1 = new Player(this, 1, name1);
         this.player2 = new Player(this, 2, name2);
+        this.infobox = new Infobox(this, this.player1);
+        this.board.mount(gameBoard);
+        this.infobox.mount(info);
+        this.player1.mount(info);
+        this.player2.mount(info);
+        this.element.append(gameBoard, info);
         this.currentPlayer = this.player1;
-        this.board.mount(this.element);
-        this.player1.mount(this.element);
-        this.player2.mount(this.element);
     }
     selectFigure(figure) {
         if (!this.currentPlayer.has(figure))
